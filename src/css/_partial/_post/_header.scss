@@ -24,14 +24,16 @@
       display: inline;
 
       a {
-        color: inherit;
+        color: $theme-color;
 
         &::before {
           content: '·';
+          padding: 3px;
+          color: $theme-color;
         }
 
         &:hover {
-          color: $theme-color;
+          color: $global-font-color;
         }
       }
     }
@@ -39,6 +41,8 @@
     .more-meta {
       &::before {
         content: '·';
+        padding: 3px;
+        color: $theme-color;
       }
     }
 

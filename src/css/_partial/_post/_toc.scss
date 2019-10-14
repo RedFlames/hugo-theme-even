@@ -31,6 +31,7 @@
     ul {
       padding-left: 20px;
       list-style: $post-toc-list-style;
+      color: $global-font-color;
 
       ul {
         padding-left: 15px;
@@ -40,6 +41,10 @@
       .has-active > ul {
         display: block;
       }
+    }
+
+    li.has-active {
+      color: $theme-color;
     }
 
     .toc-link.active {

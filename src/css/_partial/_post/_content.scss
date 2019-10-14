@@ -30,6 +30,10 @@
         }
       }
 
+      h1 {
+         color: $theme-color
+      }
+
       &:hover {
         .icon-link {
           visibility: visible;
@@ -99,6 +103,9 @@
 
   .post-summary {
     margin-bottom: 1em;
+    h1, h2, h3, h4, h5, h6, img, iframe {
+      display: none;
+    }
   }
 
   .read-more {
@@ -106,7 +113,7 @@
       color: $theme-color;
       font-size: 1.1em;
       font-family: $global-serif-font-family;
-    
+
       &:hover {
         border-bottom: $post-readMore-border-bottom;
       }
@@ -151,10 +158,12 @@
   }
 
   hr {
-    margin: 1rem 0;
+    margin: 1rem auto 2rem auto;
     position: relative;
-    border-top: 2px dashed $theme-color;
-    border-bottom: none;
+    border-top: 1px ridge $theme-color;
+    border-bottom: 2px solid $theme-color;
+    border-radius: 1px;
+    max-width: 60px;
   }
 
   .footnote-ref {

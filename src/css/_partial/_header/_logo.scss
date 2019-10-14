@@ -3,12 +3,21 @@
 // =============================
 
 .logo-wrapper {
-  float: left;
+  /*float: left;*/
+  @include circle-animate;
+  width: 90px;
+  height: 90px;
 
   .logo {
+    padding: 9px 0 0 21px;
+    position: absolute;
+  }
+
+  .logo a {
     font-size: $logo-font-size;
     font-family: $logo-font-family;
   }
+
 }
 
 @include max-screen() {

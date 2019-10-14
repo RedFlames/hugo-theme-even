@@ -8,10 +8,11 @@
 }
 
 .post {
-  padding: $post-padding;
+  padding: $post-padding-first;
 
   & + .post {
     border-top: $post-border;
+    padding: $post-padding;
   }
 
   @import '_post/header';

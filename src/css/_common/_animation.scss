@@ -32,17 +32,93 @@
   }
 }
 
+@mixin circle-animate() {
+   // found at https://stackoverflow.com/questions/26807610/css-only-animate-draw-circle-with-border-radius-and-transparent-background
+   // adapted to allow ease-in & ease-out per half.
+   // beziers from https://easings.net/en#
+
+   & {
+      position: absolute;
+   }
+
+   #halfclip1, #halfclip2 {
+       width: 50%;
+       height: 100%;
+       right: 0px;
+       position: absolute;
+       overflow: hidden;
+       transform-origin: left center;
+   }
+
+   #halfclip2 {
+       transform: rotate(180deg);
+   }
+
+   .halfcircle {
+     box-sizing: border-box;
+     height: 100%;
+     right: 0px;
+     position: absolute;
+     border: solid 3px transparent;
+      border-top-color: $theme-color;
+      border-left-color: $theme-color;
+      border-radius: 50%;
+   }
+
+   #clipped {
+       width: 200%;
+       transform: rotate(-45deg);
+   }
+
+   &:hover #halfclip1 #clipped {
+       transform: rotate(135deg);
+       animation: rotate 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1;
+   }
+
+   &:hover #halfclip2 #clipped {
+       /*transform: rotate(135deg);*/
+       animation: rotate 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s 1 forwards;
+   }
+
+   @keyframes rotate {
+     0% {transform: rotate(-45deg);}
+     100% {transform: rotate(135deg);}
+   }
+
+
+   #fixed {
+     width: 100%;
+       transform: rotate(135deg);
+       opacity: 0;
+   }
+
+   &:hover #fixed {
+       opacity: 1;
+       animation: showfixed 2s linear 1;
+   }
+
+
+
+   @keyframes showfixed {
+     0% {opacity: 0;}
+     49.99% {opacity: 0;}
+     50% {opacity: 1;}
+    100% {opacity: 1;}
+   }
+
+}
+
 @mixin mobile-menu-icon() {
   @keyframes clickfirst {
     0% {
       transform: translateY(6px) rotate(0deg);
-      
+
     }
 
     100% {
       transform: translateY(0) rotate(45deg);
     }
-  }	
+  }
 
   @keyframes clickmid {
     0% {
@@ -63,7 +139,7 @@
       transform: translateY(0) rotate(-45deg);
     }
   }
-  
+
   @keyframes outfirst {
     0% {
       transform: translateY(0) rotate(-45deg);
@@ -72,7 +148,7 @@
     100% {
       transform: translateY(-6px) rotate(0deg);
     }
-  }	
+  }
 
   @keyframes outmid {
     0% {
@@ -104,7 +180,7 @@
     width: 20px;
     height: 1px;
     background-color: $theme-color;
-  
+
     &:nth-child(1) {
       transform: translateY(6px) rotate(0deg);
     }
