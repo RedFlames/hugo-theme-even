@@ -150,7 +150,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
       enable = false
       url = "isso.redflames.space"   # where isso is running
       lang = "en"
-      reply-notifications = "false"
+      replyNotifications = "false"
       vote = "false"
 
   # Valine.
