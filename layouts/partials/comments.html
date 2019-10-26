@@ -17,6 +17,14 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   {{- end -}}
 
+  {{ if .Site.Params.isso.enable -}}
+  {{"<!-- begin comments //-->" | safeHTML}}
+  <section id="isso-thread">
+
+  </section>
+  {{"<!-- end comments //-->" | safeHTML}}
+  {{- end }}
+
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
     <div id="SOHUCS" sid="{{ .RelPermalink }}"></div>
