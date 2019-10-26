@@ -72,8 +72,14 @@
 <!-- isso -->
 {{ if .Site.Params.isso.enable -}}
 <script data-isso="//{{ .Site.Params.isso.url }}/"
-{{- range $data_key, $data_val := .Site.Params.isso.data -}}
-   data-{{- $data_key -}}="{{- $data_val }}"
+{{ if .Site.Params.isso.data.lang -}}
+   data-isso-lang="{{- .Site.Params.isso.data.lang }}"
+{{- end -}}
+{{ if .Site.Params.isso.data.reply-notifications -}}
+   data-isso-reply-notifications="{{- .Site.Params.isso.data.reply-notifications }}"
+{{- end -}}
+{{ if .Site.Params.isso.data.vote -}}
+   data-isso-vote="{{- .Site.Params.isso.data.vote }}"
 {{- end -}}
         src="//{{ .Site.Params.isso.url }}/js/embed.min.js"></script>
 {{- end -}}

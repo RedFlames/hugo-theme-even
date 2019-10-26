@@ -149,7 +149,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     [params.isso]           # isso comments
       enable = false
       url = "isso.redflames.space"   # where isso is running
-      data = { isso-lang = "en", isso-reply-notifications = "false", isso-vote = "false" }
+      lang = "en"
+      reply-notifications = "false"
+      vote = "false"
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
