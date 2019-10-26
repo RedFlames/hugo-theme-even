@@ -186,8 +186,11 @@ $content-blockquote-border-left: 3px solid rgba($theme-color, 0.3) !default;
 // Border color of the table.
 $content-table-border-color: darken($deputy-color, 3%) !default;
 
-// Border color of the table.
-$content-bold-color: darken(desaturate($theme-color, 60%), 15%) !default;
+// Bold text color.
+$content-bold-color: lighten(desaturate($global-font-color, 5%), 10%) !default;
+
+// Color of special text highlighting.
+$content-highlight-color: darken(desaturate($theme-color, 25%), 15%) !default;
 
 // ========== Code ========== //
 // Color of the code.

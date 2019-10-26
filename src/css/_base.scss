@@ -21,6 +21,8 @@ body {
 
 b, strong {
   color: $content-bold-color;
+  font-weight: 600;
+
 }
 
 @include max-screen() {
