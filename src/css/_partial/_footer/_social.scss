@@ -5,15 +5,29 @@
 .social-links {
   text-align: center;
 
-  .iconfont {
-    font-size: $social-icon-font-size;
+  .icon {
+     transition-property: transform;
+     transition-timing-function: ease-out;
+     transition-duration: 0.3s;
+     display: inline-block;
 
-    & + .iconfont {
-      margin-left: $social-link-margin-left;
-    } 
+     &:hover {
+        transform: translateY(-6px);
+     }
 
-    &:hover {
-      color: $theme-color;
-    }
-  }
+     .iconfont {
+       font-size: $social-icon-font-size;
+       transition-property: color;
+       transition-timing-function: ease-out;
+       transition-duration: 0.2s;
+
+       & + .iconfont {
+         margin-left: $social-link-margin-left;
+       }
+
+       &:hover {
+         color: $theme-color;
+       }
+     }
+   }
 }
