@@ -146,6 +146,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
 
+    [params.isso]           # isso comments
+      enable = false
+      url = "isso.redflames.space"   # where isso is running
+
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
@@ -155,7 +159,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     appKey = '你的appKey'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
     verify = false # Verification code
-    avatar = 'mm' 
+    avatar = 'mm'
     placeholder = '说点什么吧...'
     visitor = false
 

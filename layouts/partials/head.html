@@ -68,6 +68,13 @@
   {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
 {{- end -}}
 
+
+<!-- isso -->
+{{ if .Site.Params.isso.enable -}}
+<script data-isso="//{{ .Site.Params.isso.url }}/"
+        src="//{{ .Site.Params.isso.url }}/js/embed.min.js"></script>
+{{- end -}}
+
 <!-- custom css -->
 {{ range .Site.Params.customCSS -}}
 <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
