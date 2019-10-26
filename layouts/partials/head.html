@@ -72,14 +72,14 @@
 <!-- isso -->
 {{ if .Site.Params.isso.enable -}}
 <script data-isso="//{{ .Site.Params.isso.url }}/"
-{{ if .Site.Params.isso.data.lang -}}
-   data-isso-lang="{{- .Site.Params.isso.data.lang }}"
+{{ if .Site.Params.isso.lang -}}
+   data-isso-lang="{{- .Site.Params.isso.lang }}"
 {{- end -}}
-{{ if .Site.Params.isso.data.reply-notifications -}}
-   data-isso-reply-notifications="{{- .Site.Params.isso.data.reply-notifications }}"
+{{ if .Site.Params.isso.reply-notifications -}}
+   data-isso-reply-notifications="{{- .Site.Params.isso.reply-notifications }}"
 {{- end -}}
-{{ if .Site.Params.isso.data.vote -}}
-   data-isso-vote="{{- .Site.Params.isso.data.vote }}"
+{{ if .Site.Params.isso.vote -}}
+   data-isso-vote="{{- .Site.Params.isso.vote }}"
 {{- end -}}
         src="//{{ .Site.Params.isso.url }}/js/embed.min.js"></script>
 {{- end -}}
