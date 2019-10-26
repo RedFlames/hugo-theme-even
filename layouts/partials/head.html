@@ -72,6 +72,9 @@
 <!-- isso -->
 {{ if .Site.Params.isso.enable -}}
 <script data-isso="//{{ .Site.Params.isso.url }}/"
+{{- range $data_key, $data_val := .Site.Params.isso.data -}}
+   data-{{- $elem_key -}}="{{- $elem_val }}"
+{{- end -}}
         src="//{{ .Site.Params.isso.url }}/js/embed.min.js"></script>
 {{- end -}}
 
