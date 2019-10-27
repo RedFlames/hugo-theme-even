@@ -83,6 +83,7 @@
 {{- end -}}
         src="//{{ .Site.Params.isso.url }}/js/embed.min.js"></script>
 {{- end -}}
+<!-- isso custom css will be put in body to override the stylesheet added by isso's js. -->
 
 <!-- custom css -->
 {{ range .Site.Params.customCSS -}}

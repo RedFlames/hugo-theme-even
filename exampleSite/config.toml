@@ -152,6 +152,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
       lang = "en"
       replyNotifications = "false"
       vote = "false"
+      customCSS = "isso.css"    # optional. Relative to content/ according to readFile docs
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn

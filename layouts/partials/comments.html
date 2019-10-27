@@ -18,6 +18,10 @@
   {{- end -}}
 
   {{ if .Site.Params.isso.enable -}}
+  {{ if .Site.Params.isso.customCSS -}}
+  {{ $isso_custom_css := readFile .Site.Params.isso.customCSS }}
+  <style>{{ $isso_custom_css | safeCSS }}</style>
+  {{ end }}
   {{"<!-- begin comments //-->" | safeHTML}}
   <section id="isso-thread">
 
