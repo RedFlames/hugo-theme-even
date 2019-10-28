@@ -9,6 +9,7 @@
     h#{$i} {
       font-weight: 400;
       font-family: $global-serif-font-family;
+      margin-top: #{0.8+(1-$i/5)}em;
 
       .anchor {
         float: left;
@@ -28,10 +29,6 @@
             vertical-align: middle;
           }
         }
-      }
-
-      h1 {
-         color: $theme-color
       }
 
       &:hover {
@@ -158,11 +155,17 @@
   }
 
   hr {
-    margin: 1rem auto 2rem auto;
+    margin: 1.4rem auto 2rem auto;
+    position: relative;
+    border-top: 1px solid $theme-color;
+    max-width: 200px;
+  }
+
+  .highlight-me hr {
+    margin: 1.4rem auto 2.5rem auto;
     position: relative;
     border-top: 1px ridge $theme-color;
     border-bottom: 2px solid $theme-color;
-    border-radius: 1px;
     max-width: 60px;
   }
 
