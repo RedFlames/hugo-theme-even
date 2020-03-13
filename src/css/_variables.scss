@@ -167,6 +167,9 @@ $post-toc-content: 15px !default;
 // List style of the post toc list.
 $post-toc-list-style: disc !default;
 
+// List style of the post toc sublist.
+$post-toc-list-style-inner: lower-roman !default;
+
 // Max screen media of the post toc.
 $toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 
@@ -187,7 +190,7 @@ $content-blockquote-border-left: 3px solid rgba($theme-color, 0.3) !default;
 $content-table-border-color: darken($deputy-color, 3%) !default;
 
 // Bold text color.
-$content-bold-color: lighten(desaturate($global-font-color, 5%), 10%) !default;
+$content-bold-color: lighten(desaturate($global-font-color, 15%), 10%) !default;
 
 // Color of special text highlighting.
 $content-highlight-color: darken(desaturate($theme-color, 25%), 15%) !default;

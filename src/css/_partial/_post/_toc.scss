@@ -20,25 +20,29 @@
   .post-toc-content {
     font-size: $post-toc-content;
 
-    &.always-active ul {
+    &.always-active ul,
+    &.always-active ol {
       display: block;
     }
 
-    >nav>ul {
+    >nav>ul,
+    >nav>ol {
       margin: 10px 0;
     }
 
-    ul {
+    ul, ol {
       padding-left: 20px;
       list-style: $post-toc-list-style;
       color: $global-font-color;
 
-      ul {
+      ul, ol {
         padding-left: 15px;
+        list-style: $post-toc-list-style-inner;
         display: none;
       }
 
-      .has-active > ul {
+      .has-active > ul,
+      .has-active > ol {
         display: block;
       }
     }
