@@ -1,6 +1,7 @@
 .post-toc {
   position: absolute;
-  width: $post-toc-width;
+  //width: $post-toc-width;
+  width: max-content;
   margin-left: $post-toc-margin-left;
   padding: 10px;
   font-family: $global-serif-font-family;
@@ -34,6 +35,8 @@
       padding-left: 20px;
       list-style: $post-toc-list-style;
       color: $global-font-color;
+      font-variant: small-caps;
+      max-width: 250px;
 
       ul, ol {
         padding-left: 15px;
