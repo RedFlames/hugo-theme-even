@@ -60,7 +60,7 @@
   }
 }
 
-@include max-screen($toc-max-sreen-width) {
+@include max-screen($toc-max-screen-width) {
   .post-toc {
     display: none;
   }

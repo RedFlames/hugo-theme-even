@@ -162,7 +162,7 @@ $post-toc-margin-left: $global-body-width - 15px !default;
 $post-toc-title-size: 20px !default;
 
 // Font size of the post toc content.
-$post-toc-content: 15px !default;
+$post-toc-content: 16px !default;
 
 // List style of the post toc list.
 $post-toc-list-style: disc !default;
@@ -171,7 +171,7 @@ $post-toc-list-style: disc !default;
 $post-toc-list-style-inner: lower-roman !default;
 
 // Max screen media of the post toc.
-$toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
+$toc-max-screen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 
 // ========== Content ========== //
 // Headings anchor.
