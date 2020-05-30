@@ -9,9 +9,10 @@ const extractSass = new MiniCssExtractPlugin({
   filename: `even.[contenthash:8].min.css`
 });
 
-const cleanBuild = new CleanWebpackPlugin([
-  'static/dist/*'
-]);
+const cleanBuild = new CleanWebpackPlugin();
+//[
+//  'static/dist/*'
+//]);
 
 const assetsManifest = new AssetsWebpackPlugin({
   filename: 'assets.json',
