@@ -136,6 +136,11 @@
   }
 
   figure {
+     background: scale-color($code-background, $lightness: 30%);
+     box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+     border-radius: 10px;
+     padding: 15px;
+
     &.center {
       text-align: center;
     }
@@ -146,6 +151,13 @@
 
     &.left {
       text-align: left;
+    }
+
+    figcaption p {
+      font-family: Consolas,"Courier New",Courier,monospace;
+      color: #959595;
+      font-size: 0.9rem;
+      margin-bottom: 0px;
     }
 
     figcaption h4 {
