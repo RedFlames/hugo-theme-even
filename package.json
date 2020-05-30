@@ -6,7 +6,7 @@
   "scripts": {
     "start": "hugo server --source=exampleSite --themesDir=../.. --disableFastRender",
     "build": "webpack",
-    "watch": "webpack --watch --progress --colors"
+    "watch": "webpack --watch --progress --colors --devtool=eval-source-map"
   },
   "author": "ahonn, olOwOlo",
   "license": "MIT",
