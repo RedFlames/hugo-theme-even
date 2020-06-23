@@ -155,7 +155,7 @@
 
     figcaption p {
       font-family: Consolas,"Courier New",Courier,monospace;
-      color: #959595;
+      color: scale-color($code-background, $lightness: -60%);
       font-size: 0.9rem;
       margin-bottom: 0px;
     }
@@ -226,4 +226,10 @@
     overflow-y: hidden;
     padding-right: 1px;
   }
+}
+
+section.footnotes {
+   color: scale-color($code-background, $lightness: -60%, $saturation: -50%);
+   //font-family: Consolas,"Courier New",Courier,monospace;
+   font-size: 0.9em;
 }

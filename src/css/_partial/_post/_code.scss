@@ -70,6 +70,7 @@ figure.highlight {
     padding: 0;
     width: 100%;
     border-collapse: collapse;
+    vertical-align: top;
   }
 
   .code {
@@ -183,6 +184,7 @@ figure.highlight {
 
     &:first-child {
       width: 10px;
+      vertical-align: top;
 
       pre {
         margin: 0;
