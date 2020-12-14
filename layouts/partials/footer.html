@@ -16,13 +16,29 @@
 </div>
 
 <div class="copyright">
+
+  <span class="copyright-year">
+    {{- $current := now.Format "2006" }}
+    &copy;
+    {{ if ne .Site.Params.since $current -}}
+      {{ .Site.Params.since }} -
+    {{ end }}
+    {{- $current }}
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span> //
+    <a class="theme-link" href="{{- .Site.Params.legal -}}">Legal</a>
+  </span>
+
   <span class="power-by">
     {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
   </span>
   <span class="division">|</span>
   <span class="theme-info">
     {{ T "theme" }} -
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a> -
+    <a class="theme-link" href="https://github.com/RedFlames/hugo-theme-even">forked</a>.
   </span>
 
   {{ if .Site.Params.busuanzi.enable -}}
@@ -39,17 +55,4 @@
     {{- end }}
   </div>
   {{- end }}
-
-  <span class="copyright-year">
-    {{- $current := now.Format "2006" }}
-    &copy;
-    {{ if ne .Site.Params.since $current -}}
-      {{ .Site.Params.since }} -
-    {{ end }}
-    {{- $current }}
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
-  </span>
 </div>
