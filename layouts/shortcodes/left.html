@@ -1,3 +1,3 @@
-<div class='align-left'>
+<div class='align-left {{ with .Get "class" }}{{ . }}{{ end -}}'>
   {{ .Inner }}
 </div>
