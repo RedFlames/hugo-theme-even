@@ -12,10 +12,13 @@
               <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
             {{ end -}}
           </div>
-        {{- end }}
-        {{- if .Site.Params.moreMeta }}
-          <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
-          <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
+         {{- end }}
+         {{- if .Site.Params.moreMeta }}
+            {{- if (gt .WordCount 200) }}
+               {{ $wordcount := .RawContent | replaceRE "```[^`]+```" "code_snipped" | countwords }}
+               <span class="more-meta"> {{ $wordcount }} words </span>
+               <span class="more-meta"> {{ math.Ceil (div (add $wordcount .WordCount) 440.0) }} mins read </span>
+            {{- end }}
         {{- end }}
         {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
           {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
